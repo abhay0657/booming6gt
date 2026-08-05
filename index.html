@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 
-<title>Booming Bulls Academy</title>
+<title>Booming Bulls</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,285 +14,249 @@ content="width=device-width, initial-scale=1.0">
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins,sans-serif;
+}
+
+html,body{
+height:100%;
+overflow:hidden;
 }
 
 body{
 
-background:#05070c;
-color:white;
-overflow-x:hidden;
+background:url("https://i.ibb.co/svKPbSnT/400df47f-03d9-4a50-bc9b-7deccff0aa34.png") center center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+
+position:relative;
+
+min-height:100dvh;
 
 }
-
-
-/* Background */
 
 body::before{
 
 content:"";
-position:fixed;
-width:100%;
-height:100%;
-
-background:
-
-radial-gradient(circle at top,
-rgba(0,255,120,0.15),
-transparent),
-
-linear-gradient(to bottom,
-#000,
-#071018);
-
-z-index:-1;
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.65);
+backdrop-filter:blur(3px);
 
 }
-
-
-/* Container */
-
-.container{
-
-max-width:1100px;
-margin:auto;
-padding:25px;
-
-}
-
-
-/* Hero */
-
-.hero{
-
-text-align:center;
-padding:60px 20px;
-
-}
-
-
-/* Profile */
-
-.profile{
-
-width:220px;
-border-radius:25px;
-box-shadow:0 0 50px #00ff88;
-border:4px solid #00ff88;
-
-animation:float 3s ease-in-out infinite;
-
-}
-
-
-@keyframes float{
-
-50%{
-
-transform:translateY(-10px);
-
-}
-
-}
-
-
-/* Logo */
-
-.logo{
-
-width:160px;
-margin-top:30px;
-
-}
-
-
-/* Heading */
-
-h1{
-
-font-size:48px;
-margin-top:25px;
-font-weight:800;
-
-}
-
-
-h1 span{
-
-color:#00ff88;
-
-}
-
-
-.sub{
-
-margin-top:15px;
-font-size:20px;
-color:#ccc;
-
-}
-
-
-/* Cards */
 
 .card{
 
-background:rgba(255,255,255,0.06);
+position:relative;
+z-index:2;
 
-backdrop-filter:blur(15px);
+width:min(380px,92vw);
 
-padding:35px;
-margin-top:30px;
+max-height:96dvh;
 
-border-radius:25px;
+background:rgba(25,25,25,.82);
 
-border:1px solid rgba(255,255,255,.1);
+backdrop-filter:blur(12px);
 
-box-shadow:
-0 0 25px rgba(0,255,100,.15);
+border-radius:24px;
 
-}
+border:1px solid rgba(255,255,255,.08);
 
+box-shadow:0 0 35px rgba(0,0,0,.45);
 
-.card h2{
-
-color:#00ff88;
-margin-bottom:20px;
-
-}
-
-
-ul{
-
-list-style:none;
-
-}
-
-
-li{
-
-padding:12px;
-font-size:18px;
-
-}
-
-
-/* Stats */
-
-.stats{
+padding:18px;
 
 display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:30px;
+flex-direction:column;
+align-items:center;
+justify-content:space-between;
 
 }
 
+.profile{
 
-.stat{
+width:120px;
+height:120px;
 
-padding:25px;
-min-width:200px;
-border-radius:20px;
-
-background:#10161f;
-
-box-shadow:
-0 0 25px rgba(0,255,150,.15);
+border-radius:50%;
+border:1px solid #fff;
+object-fit:cover;
 
 }
 
+h1{
 
-.stat h3{
+margin-top:10px;
 
-font-size:30px;
-color:#00ff88;
+color:#fff;
+
+text-align:center;
+
+font-size:clamp(22px,4vw,34px);
+
+font-weight:800;
+
+line-height:1.2;
 
 }
 
+.subtitle{
 
-/* Button */
+margin-top:8px;
 
-.btn{
+color:#27d8ff;
 
-display:inline-block;
+font-size:clamp(12px,2vw,15px);
 
-margin-top:40px;
+text-align:center;
 
-padding:22px 45px;
+}
 
-font-size:22px;
+.badge{
 
-font-weight:bold;
+margin:14px 0;
 
-border-radius:50px;
+background:linear-gradient(90deg,#ff6500,#ff9300);
 
-text-decoration:none;
+padding:8px 18px;
+
+border-radius:40px;
 
 color:white;
 
-background:
+font-size:13px;
 
-linear-gradient(
-45deg,
-#00ff88,
-#00c853);
+font-weight:700;
 
-box-shadow:
-0 0 40px #00ff88;
+}
+
+.timer{
+
+color:#ffd43b;
+
+font-size:18px;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+}
+
+.telegram{
+
+display:block;
+
+width:100%;
+
+text-align:center;
+
+text-decoration:none;
+
+background:linear-gradient(90deg,#09c6ff,#00a8ff);
+
+padding:15px;
+
+border-radius:16px;
+
+color:white;
+
+font-size:18px;
+
+font-weight:700;
+
+box-shadow:0 0 20px rgba(0,174,255,.45);
 
 transition:.3s;
 
 }
 
+.telegram:hover{
 
-.btn:hover{
+transform:translateY(-3px);
 
-transform:scale(1.08);
+box-shadow:0 0 35px rgba(0,174,255,.9);
 
 }
 
+.features{
 
-/* Footer */
+width:100%;
 
-.footer{
+margin-top:18px;
 
-margin-top:50px;
-padding-bottom:40px;
+}
+
+.features div{
+
+padding:8px 0;
+
+color:white;
+
+font-size:15px;
+
+}
+
+footer{
+
+margin-top:10px;
+
+font-size:11px;
+
+color:#9c9c9c;
+
 text-align:center;
-color:#aaa;
 
 }
 
+/* ---------- MOBILE ---------- */
 
-/* Responsive */
-
-@media(max-width:768px){
-
-h1{
-
-font-size:34px;
-
-}
-
-.sub{
-
-font-size:17px;
-
-}
+@media(max-height:720px){
 
 .profile{
+width:120px;
+height:120px;
+}
 
-width:180px;
+h1{
+font-size:24px;
+}
 
+.subtitle{
+font-size:12px;
+}
+
+.badge{
+font-size:11px;
+padding:6px 14px;
+margin:10px 0;
+}
+
+.timer{
+font-size:15px;
+margin-bottom:10px;
+}
+
+.telegram{
+padding:12px;
+font-size:16px;
+}
+
+.features div{
+font-size:13px;
+padding:6px 0;
+}
+
+footer{
+font-size:10px;
+}
+
+.card{
+padding:15px;
 }
 
 }
-
 
 </style>
-</head>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -305,173 +267,79 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2560684341035408');
+fbq('init', '1597322911821754');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1432406185385159&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1597322911821754&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code --><body>
+<!-- End Meta Pixel Code -->
+</head>
 
+<body>
 
-<div class="container">
+<div class="card">
 
-<div class="hero">
+<img src="https://i.ibb.co/fK4F3Gq/Screenshot-2026-08-05-125334.png" class="profile">
 
+<h1>Booming Bulls</h1>
 
-<!-- YOUR IMAGE -->
+<div class="subtitle">
+📈 Daily Market Updates & Trading Education
+</div>
 
-<img src="https://i.ibb.co/svKPbSnT/400df47f-03d9-4a50-bc9b-7deccff0aa34.png"
-class="profile">
+<div class="badge">
+🏆 15+ Years Trading Experience
+</div>
 
+<div class="timer">
+⏰ Offer Ends In :
+<span id="time">01:00</span>
+</div>
 
-<h1>
-
-Anish Singh <span>Thakur</span>
-
-</h1>
-
-
-<p class="sub">
-
-Professional Forex Trader & Mentor
-
-</p>
-
-
-<a href="https://t.me/+8jfz4p_oYWcwYzg9"
-class="btn">
-
-JOIN FREE TELEGRAM
-
+<a href="https://t.me/+8jfz4p_oYWcwYzg9" class="telegram">
+🚀 JOIN TELEGRAM CHANNEL
 </a>
 
+<div class="features">
+
+<div>📊 Live Market Analysis</div>
+
+<div>🔥 Premium Trading Setups</div>
+
+<div>⚡ Instant Alerts</div>
+
+<div>💎 Daily Educational Updates</div>
 
 </div>
 
+<footer>
 
+© 2026 Booming Bulls Academy | All Rights Reserved
 
-<div class="card">
-
-<h2>
-
-About Me
-
-</h2>
-
-<p>
-
-I'm Anish Singh Thakur, a Forex Trader and Mentor. I help aspiring traders understand the Forex market through practical concepts and educational content shared in my Telegram community.
-
-</p>
+</footer>
 
 </div>
 
+<script>
 
+let seconds=60;
 
-<div class="card">
+setInterval(()=>{
 
-<h2>
+let m=Math.floor(seconds/60);
 
-What You Will Learn
+let s=seconds%60;
 
-</h2>
+document.getElementById("time").innerHTML=
 
-<ul>
+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
 
-<li>✓ Forex Trading Basics</li>
+if(seconds>0) seconds--;
 
-<li>✓ Price Action Trading</li>
+},1000);
 
-<li>✓ Risk Management</li>
-
-<li>✓ Market Structure</li>
-
-<li>✓ Trading Psychology</li>
-
-<li>✓ Entry & Exit Strategies</li>
-
-<li>✓ Live Market Analysis</li>
-
-<li>✓ Beginner To Advanced Concepts</li>
-
-</ul>
-
-</div>
-
-
-
-
-<div class="stats">
-
-<div class="stat">
-
-<h3>FREE</h3>
-<p>Learning Content</p>
-
-</div>
-
-
-<div class="stat">
-
-<h3>FOREX</h3>
-<p>Trading Education</p>
-
-</div>
-
-
-<div class="stat">
-
-<h3>24/7</h3>
-<p>Market Insights</p>
-
-</div>
-
-
-</div>
-
-
-
-<div class="card">
-
-<h2>
-
-Join The Community
-
-</h2>
-
-<p>
-
-Become a part of the Booming Bulls Academy Telegram community and start learning Forex Trading with structured educational content, market insights, and practical trading knowledge.
-
-</p>
-
-
-<center>
-
-<a href="https://t.me/+8jfz4p_oYWcwYzg9"
-class="btn">
-
-JOIN TELEGRAM NOW
-
-</a>
-
-</center>
-
-</div>
-
-
-
-<div class="footer">
-
-© 2026 Booming Bulls Academy<br>
-
-Learn. Trade. Grow.
-
-</div>
-
-
-</div>
+</script>
 
 </body>
 </html>
